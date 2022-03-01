@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro site com Bootstrap</title>
+    <!-- No curso ele linkou dois arquivos de css, um da biblioteca do bootstrap e outro novo onde vai conter as alterações nossas.-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="#">
+            <img  class="logoimg" src="img/LOGO AT.png" alt="Alambrados Triunfo" width="220" height="80">
+        </a>
+        <!-- criando uma sessão com classe, voce pode depois chamar ela como link no menu, praticamente uma landing page-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#Produtos">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#Quemsomos">Quem Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#Contato">Contato</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+    <section id="Produtos">
+        <div class="container-fluid produtos text-center margin">
+           <h1>Produtos</h1>
+           <p>Nossos produtos...</p>
+           <img class="imgproduto" src="img/alambrado.jpg" alt="Tela de alambrado" width="600" height="300">
+           <h3>Produzimos telas de alambrados sob medida para sua necessidade </h3>
+
+         
+
+        </div>
+
+    <section id="Quemsomos">
+        <div class="container-fluid quemsomos text-center margin">
+            <h1>Quem Somos</h1>
+            <p>Somos uma empresa ....</p>
+        </div>
+
+    <section id="Contato">
+         <div class="container-fluid contato text-center margin">
+            <h1>Contato</h1>
+            <h3>Para entrar em contato com a gente:</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="img/icons8-facebook-150.png" alt="Facebook" width="100%">
+                        <h2>Facebook</h2>
+                        <p>Para ver nossos trabalhos siga nos no facebook.</p>
+                         <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                </div>
+                
+                <div class="col-lg-4">
+                    <img src="img/icons8-instagram-150.png" alt="Instagram" width="100%">
+            
+                    <h2>Instagram</h2>
+                    <p>Para ver as novidades, promoções e nossos trabalhos atuais, siga nos no Instagram</p>
+                    <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                  </div>
+                
+                  <div class="col-lg-4">
+                    <img src="img/icons8-whatsapp-150.png" alt="Whatsapp" width="100%">
+            
+                    <h2>Whatsapp</h2>
+                    <p>Para tirar duvidas, fazer um orçamento ou um pedido, entre em contato pelo Whatsapp!</p>
+                    <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                  </div>
+            
+            
+            
+            </div>
+            </div>
+         </div>
+    
+
+
+    </section>
+</body>
+</html>
