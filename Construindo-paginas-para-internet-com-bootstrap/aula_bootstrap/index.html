@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiro site com Bootstrap</title>
     <!-- No curso ele linkou dois arquivos de css, um da biblioteca do bootstrap e outro novo onde vai conter as alterações nossas.-->
+    <link rel="shortcut icon" href="img/LOGO AT.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -33,18 +34,45 @@
     <section id="Produtos">
         <div class="container-fluid produtos text-center margin">
            <h1>Produtos</h1>
-           <p>Nossos produtos...</p>
+           
+           <!--
            <img class="imgproduto" src="img/alambrado.jpg" alt="Tela de alambrado" width="600" height="300">
            <h3>Produzimos telas de alambrados sob medida para sua necessidade </h3>
+           -->
+           <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                    <img class="imgproduto" src="img/alambrado.jpg" alt="Alambrados" width="100%">
+                    <h2>Alambrados</h2>
+                    <p>Telas de alambrados, da medida que precisar e de qualquer tipo de arame, sob demanda</p>
+                    
+                    </div>
+                
+            
+                 <div class="col-lg-4">
+                    <img class="imgproduto" src="img/mourões.jpg" alt="Mourões" width="100%">
+                    <h2>Mourões</h2>
+                    <p>Mourões de concreto.</p>
+                    </div>
 
-         
+                    <div class="col-lg-4">
+                        <img class="imgproduto" src="img/serviço.jfif" alt="Instalação" width="100%">
+                        <h2>Instalação dos mourões e alambrado.</h2>
+                        <p>Fazemos também o serviço completo, de colocação dos morões e tela de forma profissional.</p>
+                        </div>
+                </div>
+            </div>
+
+
 
         </div>
 
     <section id="Quemsomos">
         <div class="container-fluid quemsomos text-center margin">
             <h1>Quem Somos</h1>
-            <p>Somos uma empresa ....</p>
+            <img class="imgproduto" src="img/pexels-pixabay-163064.jpg" alt="Equipe" width="600" height="350">
+
+            <p>Somos uma empresa recente e que está ganhando mercado na região, não só vendemos e entregamos os pedidos, como também oferecemos o serviço de instalação da tela e morões, um pacote completo para o cliente.</p>
         </div>
 
     <section id="Contato">
@@ -85,5 +113,9 @@
 
 
     </section>
+    <footer class="container-fluid text-center bg-footer margin">
+        <p>Desenvolvido por Pedro.</p>
+
+    </footer>
 </body>
 </html>

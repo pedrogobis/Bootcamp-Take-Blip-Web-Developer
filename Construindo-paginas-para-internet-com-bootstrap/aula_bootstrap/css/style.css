@@ -22,10 +22,16 @@
 }
 
 .imgproduto{
-    border-radius: 10px;
+    border-radius: 10px 10px 10px 10px;
+    padding-bottom: 40px;
 }
 
-h3{
-    padding: 30px;
+h1{
+    font-weight: bold;
 }
 
+.bg-footer{
+    background-color: black;
+    color: white;
+    
+}
