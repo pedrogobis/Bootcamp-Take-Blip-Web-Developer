@@ -1,0 +1,100 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgba(179, 141, 211, 0.658);
+    max-width: 900px;
+    margin: auto;
+}
+
+header{
+    text-align: center;
+}
+
+.photo{
+    text-align: center;
+    border-radius: 50%; /*colocando 50% vai deixar a foto redonda sem nem precisar editar.*/
+    border: 1px solid rgba(0, 0, 0, 0.637)k;
+    height: 250px;
+    width: 300px;
+}
+
+#title, .subtitle, .posttitle{
+    color: rgba(19, 40, 110, 0.89);
+    font-weight: bold;
+
+}
+
+/* Sempre que for alinhar uma pagina, crie padrões, se for retirar as margens padrão e colocar as suas, as suas coloque sempre tudo com margem pra cima ou pra baixo.*/
+.posttitle{
+    font-size: 20px;
+    text-transform: uppercase; /* transforma o texto, em maiusculo, minusculo, ou todas as primeiras letras maior*/
+    font-style: italic;
+    margin: 0;
+    margin: 15px;
+}
+/*
+a{
+    text-decoration: none;
+    color: white;
+}
+*/
+.textolink{
+    text-decoration: none;
+    color: blueviolet;
+
+}
+
+a:hover{
+    color: black;
+
+}
+
+.post{
+    background-color: white;
+    text-align: justify;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 3px solid rgba(0, 0, 0, 0.637);
+    border-radius: 15px;
+
+}
+
+.imagpost{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    width: 100% /*sempre vai respeitar o tamanho maximo do body*/;
+
+}
+
+.postcontent{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+footer{
+    background-color: rgba(136, 66, 130, 0.596);
+    padding-left: 10px;
+}
+
+.rodape{
+    font-weight: bold;
+    
+
+}
+/* agora eu forcei a tag a a me responder.*/
+.rodape li a {
+    text-decoration: none;
+
+}
+
+.gmail{
+    padding-left: 8px;
+    list-style-image: url(img/Gmail_29991.ico);
+}
+
+.twitter{
+    padding-left: 8px;
+    list-style-image: url(img/twitter_socialnetwork_20007.ico);
+}
