@@ -10,6 +10,7 @@
     box-sizing: border-box; /* define o tamanho da caixa para não vazar*/
 }
 
+/* Elementos base */
 body{
     background-color: var(--preta);
     font-family: 'Times New Roman', Times, serif;
@@ -42,3 +43,37 @@ nav a{
 header nav a:hover{
     color: #fff;
 }
+
+/*Conteudo em destaque*/
+/*divida css em categorias e sempre comente entre as divisões*/
+
+.filme-principal{
+    font-size: 16px;
+    /* coloquei a imagem como background*/
+    /*img que eu escolhi não é muito boa, preciso ou pegar uma menor ou outra.*/
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.555)100%), url('/img/thegreat.jpg');
+    /* Defini o tamanho da caixa, filme principal*/
+    height: 450px;
+    /* defini o comportamento do background*/
+    background-size: cover;
+    
+    display: flex;
+    /* colocou como coluna, nao na linha*/
+    flex-direction: column;
+    /* normalizar ele na vertical, segue a direção do flex direction, cada item numa linha*/
+    justify-content: center;
+    /*comecem sempre a esquerda*/
+    align-items: flex-start;
+    
+}
+
+.filmeprincipal , .descricao, .botoes{
+    margin-bottom: 90px;
+    margin-left: 10px;
+}
+
+.titulo{
+    font-size: 40px;
+    margin-left: 10px;
+}
+
