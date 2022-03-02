@@ -1,0 +1,44 @@
+:root{
+    --vermelho: #e50914;
+    --preta: #141414;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* define o tamanho da caixa para não vazar*/
+}
+
+body{
+    background-color: var(--preta);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex; /*display em flex coloca tudo em linha, inline*/
+    flex-direction: row;
+    align-items: center; /*alinhar os itens ao centro, vai alinhar as caixas e não o texto, imagino que seja essa a diferença entre o text aling*/
+    justify-content: space-between; /* distancia entre os elementos, no caso a nav e a logo, poderia mudar os lados*/
+}
+
+header .logo{
+    margin-left: 10px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    text-align: left;
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header nav a:hover{
+    color: #fff;
+}
