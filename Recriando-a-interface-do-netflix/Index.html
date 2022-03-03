@@ -6,18 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soskflix</title>
     <link rel="stylesheet" href="style/main.css">
+
+    <!-- Linkando os arquivos owl-->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+
+    <!-- Linkando o css de responsividade-->
+    <link rel="stylesheet" href="style/responsive.css">
+
 </head>
 <body>
     <header>
         <div class="container">
-            <h2 class="logo">Soskflix</h2>
+            <h2 class="logo">Netflix</h2>
             <nav> <!-- alt+shift+baixo serve para clonar a linha de cima, pratico de mais-->
                 <a href="#">Inicio</a>
-                <a href="#">Filmes</a>
-                <a href="#">Series</a>
-                <a href="#">Documentarios</a>
-                <a href="#">Animes</a>
-                <a href="#">Doramas</a>
+                <a href="#filmes">Filmes</a>
+                <a href="#series">Series</a>
+                <a href="#documentarios">Documentarios</a>
+                <a href="#anime">Animes</a>
+               
             </nav>
 
         </div>
@@ -34,15 +42,208 @@
                 <div class="botoes">
                     <!-- role button pq n é todo navegador que aceita simplesmente a tag button-->
                     <button role="button" class="botao">
+                         <i class="fa-solid fa-play"></i>
                       Assistir agora
                     </button>
                     <button role="button" class="botao">
-                        + Detalhes
+                        <i class="fa-solid fa-plus"></i>
+                        Detalhes
                     </button>
                 </div>
             </div>
            
         </div>
     </main>
+
+    <!-- O professor fez abaixo da classe main, vou fazer também embora eu acho que seria antes de finalizar a main.-->
+    <div class="carrosel-filmes">
+        <h3>Novidades</h3>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="box-filme" src="img/mini1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini5.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini6.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini7.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini8.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini9.jpg" alt="">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/mini10.jpg" alt="">
+            </div>
+        
+
+        </div>
+    </div>
+    <div class="carrosel-filmes">
+        <h3 id="filmes">Filmes</h3>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="box-filme" src="img/mini1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini5.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini6.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini7.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini8.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini9.jpg" alt="">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/mini10.jpg" alt="">
+            </div>
+    </div>
+    <div class="carrosel-filmes">
+        <h3 id="series">Series</h3>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="box-filme" src="img/mini1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini5.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini6.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini7.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini8.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini9.jpg" alt="">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/mini10.jpg" alt="">
+            </div>
+    </div>
+    <div class="carrousel-filmes">
+        <h3 id="documentarios">Documentarios</h3>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="box-filme" src="img/mini1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini5.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini6.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini7.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini8.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini9.jpg" alt="">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/mini10.jpg" alt="">
+            </div>
+    </div>
+    <div class="carrousel-filmes">
+        <h3 id="anime">Animes</h3>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="box-filme" src="img/mini1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini5.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini6.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini7.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini8.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini9.jpg" alt="">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/mini10.jpg" alt="">
+            </div>
+    </div>
+
+<footer class="rodape">
+    <p>Netflix Brasil</p>
+</footer>
+    <!-- Font awesome para colocar seus icones, de fora, sem estar no servidor local-->
+
+    <!-- Ideal sempre criar um padrão, o javascript linkado sempre no final-->
+    <script src="https://kit.fontawesome.com/b7631a6b7d.js" crossorigin="anonymous"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/setup.js"></script>
 </body>
 </html>

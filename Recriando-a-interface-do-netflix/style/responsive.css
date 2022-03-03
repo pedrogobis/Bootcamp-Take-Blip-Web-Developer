@@ -1,0 +1,19 @@
+@media screen and (max-width: 700px){ /* @ media selicionou a tela e colocou o parametro de que quando a tela tiver até 700 px, o arquivo de css vai sofrer estas alterações */
+    header .container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .botao{
+        margin-top: 5px;
+        width: 190px;
+        
+    }
+}
+
+@media screen and (min-width:1000px){
+    .descricao{
+        width: 50%;
+    }
+    
+}
