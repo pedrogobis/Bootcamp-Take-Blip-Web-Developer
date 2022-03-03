@@ -32,7 +32,7 @@ header .logo{
     margin-left: 5px;
     color: var(--vermelho);
     font-family: 'Bebas Neue', cursive; 
-    letter-spacing: 0.5em;
+    letter-spacing: 0.3em;
     font-size: 40px;
     text-align: left;
     cursor: pointer;
