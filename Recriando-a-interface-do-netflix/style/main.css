@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 :root{
     --vermelho: #e50914;
     --preta: #141414;
@@ -17,6 +20,7 @@ body{
     color: white;
 }
 
+
 header .container{
     display: flex; /*display em flex coloca tudo em linha, inline*/
     flex-direction: row;
@@ -27,10 +31,16 @@ header .container{
 header .logo{
     margin-left: 5px;
     color: var(--vermelho);
-    font-family: 'Arial Black', Times;
+    font-family: 'Bebas Neue', cursive; 
+    letter-spacing: 0.5em;
     font-size: 40px;
     text-align: left;
+    cursor: pointer;
     
+}
+
+header .logo:hover{
+    color: white;
 }
 
 nav a{
