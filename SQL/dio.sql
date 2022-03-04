@@ -23,4 +23,20 @@ UPDATE pessoa SET nome='Amanda Vasques' WHERE id=7;
 UPDATE pessoa SET nome='Guilherme Stracci' WHERE id=8;
 
 DELETE FROM pessoa WHERE id=3;
-/*matamos a marta*/
+/*matamos a fernanda*/
+
+/*Ordenando a tabela por alfabeto crescente*/
+SELECT * FROM pessoa ORDER BY nome 
+
+/*Ordenando a tabela por alfaveto Decrescente*/
+SELECT * FROM pessoa ORDER BY nome DESC
+
+/*Alterando a tabela e inserindo mais uma coluna*/
+ALTER TABLE 'pessoa' ADD 'genero' VARCHAR(1) NOT NULL AFTER 'nasc';
+
+UPDATE pessoa SET genero='M' WHERE id=2;
+UPDATE pessoa SET genero='F' WHERE id=4;
+UPDATE pessoa SET genero='M' WHERE id=5;
+UPDATE pessoa SET genero='M' WHERE id=6;
+UPDATE pessoa SET genero='F' WHERE id=7;
+UPDATE pessoa SET genero='M' WHERE id=8;
