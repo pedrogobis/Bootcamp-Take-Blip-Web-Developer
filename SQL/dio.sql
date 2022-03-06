@@ -40,3 +40,62 @@ UPDATE pessoa SET genero='M' WHERE id=5;
 UPDATE pessoa SET genero='M' WHERE id=6;
 UPDATE pessoa SET genero='F' WHERE id=7;
 UPDATE pessoa SET genero='M' WHERE id=8;
+
+/*Usando command line*/
+/*Mostra os bandos de dados*/
+SHOW DATABASES;
+
+/*Mostra as tabelas*/
+SHOW TABLES;
+
+/*Criando BD*/
+CREATE DATABASE escola;
+
+/*Selecionar o bd*/
+USE escola;
+
+/*Criar tabela*/
+CREATE TABLE cursos (id_curso INT AUTO_INCREMENT PRIMARY KEY, curso VARCHAR(30));
+
+/*INSERINDO DADOS*/
+INSERT INTO cursos (nome) VALUE('HTML');
+INSERT INTO cursos (nome) VALUE('MYSQL');
+INSERT INTO cursos (nome) VALUE('CSS');
+INSERT INTO cursos (nome) VALUE('LOGISTICA');
+
+/*Deletando, selecionando pelo nome*/
+DELETE FROM cursos WHERE nome='CSS';
+
+/*Inserindo uma coluna na tabela*/
+ALTER TABLE cursos ADD carga_horaria INT(2) AFTER nome;
+
+/*Inserindo uma quantidade padrão de horas nas colunas*/
+UPDATE cursos SET carga_horaria=20;
+
+SELECT * FROM cursos
+
+/*Atualizando uma linha em especificio*/
+UPDATE cursos SET carga_horaria=90 WHERE id_curso=2;
+
+INSERT INTO cursos (nome) VALUE('PYTHON');
+INSERT INTO cursos (nome) VALUE('C++');
+INSERT INTO cursos (nome) VALUE('C#');
+INSERT INTO cursos (nome) VALUE('CONTABILIDADE');
+
+
+/*Criando um bd, uma tabela e deletando*/
+
+CREATE DATABASE loja;
+
+USE loja;
+
+CREATE TABLE itens (id_item INT PRIMARY KEY AUTO_INCREMENT, nome_prt VARCHAR(40), preco INT NOT NULL);
+
+INSERT INTO itens (nome_prt, preco) VALUE('CADEIRA', '130.00');
+INSERT INTO itens (nome_prt, preco) VALUE('TECLADO', '140.00');
+INSERT INTO itens (nome_prt, preco) VALUE('MONITOR', '930.00');
+INSERT INTO itens (nome_prt, preco) VALUE('MOUSE', '100.00');
+
+DROP TABLE itens;
+
+/*feito*/
