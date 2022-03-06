@@ -1,3 +1,11 @@
+/*
+Material interessante para consulta:
+
+https://www.devmedia.com.br/primeiros-passos-no-mysql/28438
+
+*/
+
+
 CREATE TABLE pessoa( /* Criamos uma tabela */
     id INT NOT NULL PRIMARY KEY AUTO INCREMENT, 
     nome VARCHAR(40) NOT NULL,
