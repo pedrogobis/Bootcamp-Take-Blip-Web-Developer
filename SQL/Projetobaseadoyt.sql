@@ -173,3 +173,18 @@ INSERT INTO autor (nome, born) VALUES ('TUDO COMIDA', '1998-12-29');
 INSERT INTO autor (nome, born) VALUES ('FERNANDOGAMEPLAYS', '2002-06-30');
 INSERT INTO autor (nome, born) VALUES ('SOSK', '1993-09-09');
 INSERT INTO autor (nome, born) VALUES ('TAIS', '1998-12-29');
+
+
+/*Treinando relacionamento de tabelas*/
+
+SELECT videos.title, seo.category FROM videos JOIN seo ON videos.fk_seo = seo.id_seo;
+
+SELECT * FROM playlist JOIN videos_playlist ON playlist.id_playlist = videos_playlist.fk_playlist;
+
+SELECT * FROM playlist JOIN videos_playlist ON playlist.id_playlist = videos_playlist.fk_playlist
+JOIN autor ON AUTOR.id_autor = playlist.fk_autor;
+
+SELECT playlist.nome_pl, playlist.fk_autor, videos_playlist.fk_videos, autor.nome FROM playlist JOIN videos_playlist ON playlist.id_playlist = videos_playlist.fk_playlist
+JOIN autor ON AUTOR.id_autor = playlist.fk_autor;
+
+SELECT playlist.nome_pl, autor.nome FROM playlist JOIN autor ON playlist.fk_autor = autor.id_autor WHERE playlist.id_playlist;
