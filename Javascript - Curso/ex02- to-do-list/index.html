@@ -9,26 +9,14 @@
 </head>
 <body>
     <main>
-        <h1>To Do List:</h1>
-        <h3>Insira itens na sua To Do List!</h3>
-        <hr>
-        <p>Para inserir itens na sua lista, basta digitar no campo abaixo, e apertar em inserir!</p>
-        <hr>
-        <div id="list">
-            <form id="task-form">
-                <input id="task-input" type="text" name="tarefa" class="itemtd" placeholder="Digite aqui sua tarefa" size="25">
-                <button class="inserir" type="submit">
-                    Inserir
-                </button>
-            </form>
-        </div>
-        <hr>
-        <p>Aqui em baixo vai ser apresentada sua Lista de afazeres: </p>
-        <hr>
-        <p id="res">
-
-        </p>
-
+        <h1>To-do list</h1>
+    <div id="list">
+        <form id="task-form">
+            <input id="task-input" name="tarefa" type="text" placeholder="Digite aqui sua tarefa" />
+            <button type="submit">Adicionar</button>
+        </form>
+        <div id="tasks"></div>
+    </div>
     </main>
     <script src="assets/js/js.js"></script>
 </body>
