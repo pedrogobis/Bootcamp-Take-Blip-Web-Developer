@@ -1,0 +1,40 @@
+body{
+    background-color: rgba(96, 140, 190, 0.911);
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    
+}
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 15px;
+    margin: auto;
+    background-color: aliceblue;
+    border-radius: 5px;
+   
+
+}
+h1{
+    color: rgb(49, 107, 158);
+    text-shadow: 2px 2px 2px black;
+}
+
+button{
+    font-size: 15pt;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(49, 130, 145, 0.644);
+    border-radius: 50%; 
+}
+
+div#area{
+    background: rgba(85, 187, 85, 0.781);
+    color: white;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 40px;
+    margin: auto;
+    padding: 30px;
+}
