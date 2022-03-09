@@ -9,12 +9,25 @@
 </head>
 <body>
     <main>
-        <h1>Contador de clicks</h1>
-        <p>Click no mais para aumentar os clicks ou no menos para diminuir os clicks</p>
-        <p><button onclick="clicou()" name="botao">+</button><button onclick="clicoumenos()" name="botao">-</button></p>
-        <p><hr></p>
-        <p>Aqui em baixo vai aparecer o contador </p>
-        <p id="res"></p>
+        <h1>To Do List:</h1>
+        <h3>Insira itens na sua To Do List!</h3>
+        <hr>
+        <p>Para inserir itens na sua lista, basta digitar no campo abaixo, e apertar em inserir!</p>
+        <hr>
+        <div id="list">
+            <form id="task-form">
+                <input id="task-input" type="text" name="tarefa" class="itemtd" placeholder="Digite aqui sua tarefa" size="25">
+                <button class="inserir" type="submit">
+                    Inserir
+                </button>
+            </form>
+        </div>
+        <hr>
+        <p>Aqui em baixo vai ser apresentada sua Lista de afazeres: </p>
+        <hr>
+        <p id="res">
+
+        </p>
 
     </main>
     <script src="assets/js/js.js"></script>

@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,700&display=swap');
+
 body{
     background-color: rgba(96, 140, 190, 0.911);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    font-weight: normal;
     color: black;
     
 }
@@ -9,22 +12,24 @@ main{
     max-width: 1000px;
     padding: 15px;
     margin: auto;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
    
 
 }
 h1{
-    color: rgb(49, 107, 158);
-    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px black;
 }
 
 button{
     font-size: 15pt;
     font-weight: bold;
-    padding: 20px;
+    margin-left: 10px;
+    padding: 10px;
     background-color: rgba(49, 130, 145, 0.644);
-    border-radius: 50%; 
+    border-radius: 10%; 
 }
 
 div#area{
@@ -38,3 +43,8 @@ div#area{
     margin: auto;
     padding: 30px;
 }
+
+input.itemtd{
+    padding: 15px ;
+}
+

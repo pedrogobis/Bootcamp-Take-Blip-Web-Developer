@@ -1,16 +1,28 @@
-let res = document.getElementsByTagName('p')[4];// Podemos pegar os elementos de uma pagina deste jeito também, indicando o numero da tag com colchetes do lado de fora
+const form = document.querySelector('#task-form')
+const res = document.querySelector('#res') 
 
-let contador = 0;
-
-function clicou(){
-    contador ++ // não precisa colocar um igual, pois já fala que o contador recebe ++
-    res.style.color = 'red';  // mudou a cor.
-    res.innerHTML = `Você clicou ${contador} vezes`;
+form.onsubmit = function(e){
+    e.preventDefault();
+    const inputField = document.getElementById('task-input');
+    addTask(inputField.value);
+    form.reset();
 
 }
-function clicoumenos(){
-    contador --
-    res.style.color = 'blue'
-    res.innerHTML = `Você clicou ${contador} vezes`;
+
+function addTask(description){
+    const taskContainer = document
+    
+    
+    
+    
+    
+    
+    
+    
+    res.innerHTML += `<p>
+        <input type="checkbox" class="checkbox" name="chk">
+        <label for="chk1">${itemf}</label>
+    </p>`;
+    
 
 }
