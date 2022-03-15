@@ -16,4 +16,4 @@ function soma(a,b){
     console.log(c)
 }
 
-soma(33,3)
+soma(33,)
