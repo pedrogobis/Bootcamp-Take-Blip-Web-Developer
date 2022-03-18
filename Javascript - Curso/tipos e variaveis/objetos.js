@@ -11,6 +11,12 @@ person.age = '35'
 
 console.log(person)
 
+console.log(person.name)
+console.log(person)
+
+
+
+
 
 // valores dentro do objeto
 console.log(Object.values(person))
