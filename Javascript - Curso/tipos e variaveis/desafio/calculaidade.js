@@ -38,3 +38,4 @@ function calculaIdade(anos){
 }
 
 console.log(calculaIdade.call(aluno1,4));
+console.log(calculaIdade.apply(aluno4,[7]));
