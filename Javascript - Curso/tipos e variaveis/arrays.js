@@ -22,3 +22,9 @@ for(let i = 0; i <= numeros.length; i++){
 
 // qtde de numeros dentro de numeros.
 console.log(numeros.length)
+
+console.log(numeros[3])
+
+
+
+console.log(numeros)
