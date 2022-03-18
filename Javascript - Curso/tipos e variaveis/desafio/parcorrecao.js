@@ -24,4 +24,4 @@ var numeros = [
  ]
 
 var p = 'marta'
-console.log(par([]));
+console.log(par());
