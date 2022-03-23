@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body{
+    
+    background-color: #e5e8e8;
+    color: #4e545c;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+body.dark-mode{
+    background-color: #5b5e63;
+    color: #e5e8e8;
+}
+
+main{
+    /*pra colar o footer no chao ela fez a config de altura max do display*/
+    height: 100vh;
+    width: 100%;
+    /*Usou a tag display*/
+    display: flex;
+    /*colocou parametro de coluna*/
+    flex-direction: column;
+    /*alinhou ao center como se fosse uma tabela.*/
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    
+    background-color: #4e545c;
+    color: #e5e8e8;
+
+    
+    border-radius: 50px;
+    border: none;
+    font-size: 2rem;
+    padding: 15px;
+    transition: all .05s linear;
+    
+}
+
+button:hover{
+    transition: .5s;
+    background-color: #000401;
+    
+    
+}
+
+button.dark-mode{
+    background-color: #e5e8e8;
+    color: #4e545c;
+}
+
+button.dark-mode:hover{
+    background-color: #4e545c;
+    color: #e5e8e8;
+}
+
+footer{
+    width: 100%;
+    background-color: #4e545c;
+    color: #e5e8e8;
+    /* fez igual no curso, fixou a posição */
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 25px;
+}
+
+footer.dark-mode{
+    background-color: #8d9797;
+    color: #000401;
+}
