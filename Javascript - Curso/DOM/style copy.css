@@ -46,21 +46,18 @@ button{
 }
 
 button:hover{
-    border-radius: 50px;
-    
+    transition: .5s;
     background-color: #000401;
     
     
 }
 
 button.dark-mode{
-    border-radius: 50px;
     background-color: #e5e8e8;
     color: #4e545c;
 }
 
 button.dark-mode:hover{
-    border-radius: 50px;
     background-color: #4e545c;
     color: #e5e8e8;
 }
