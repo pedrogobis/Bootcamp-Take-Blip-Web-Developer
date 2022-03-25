@@ -11,11 +11,8 @@ function start() { // Inicio da função start()
     $("#fundoGame").append("<div id='energia'></div>");
 
 
-} // Fim da função start
 
-
-
-//Principais variáveis do jogo
+    //Principais variáveis do jogo
 
 var jogo = {}
 var TECLA = {
@@ -522,3 +519,20 @@ function explosao1(inimigo1X,inimigo1Y) {
         } // Fim da função gameOver();
     
 
+} // Fim da função start
+
+    
+//Reinicia o Jogo
+		
+    function reiniciaJogo() {
+	somGameover.pause();
+	$("#fim").remove();
+	start();
+	
+    } //Fim da função reiniciaJogo
+
+
+
+
+        
+        
