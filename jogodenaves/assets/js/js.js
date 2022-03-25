@@ -33,6 +33,9 @@ var velocidade=5;
 //variavel da posicao, usou a funcao math com random, ele vai pegar um numero aleatorio de 0 até 334. que é onde o item pode se mover no fundo da img
 var posicaoY = parseInt(Math.random() * 334);
 
+//variavel do tiro
+var podeAtirar=true;
+
 
 //Verifica se o usuário pressionou alguma tecla	
 	
@@ -106,7 +109,8 @@ function movejogador() {
 
 	if (jogo.pressionou[TECLA.D]) {
 		
-		//Chama função Disparo	
+        disparo();
+		
 	}
 
 	} // fim da função movejogador()
@@ -157,3 +161,43 @@ function moveamigo() {
 		}
 
 } // fim da função moveamigo()
+
+function disparo() {
+	
+    //se pode atirar for igual a tiro
+	if (podeAtirar==true) {
+	// muda para false enquanto executar a funcao
+	podeAtirar=false;
+	
+    // criou a variavel com as posicoes do jogador
+	topo = parseInt($("#jogador").css("top"))
+	posicaoX= parseInt($("#jogador").css("left"))
+	// fez o calculo
+    tiroX = posicaoX + 190;
+	topoTiro=topo+39;
+    //local inicial do tiro. na frente do jogador embaixo.
+    // feito o calculo, chamou a img do disparo na frente do jogador
+	$("#fundoGame").append("<div id='disparo'></div");
+	$("#disparo").css("top",topoTiro);
+	$("#disparo").css("left",tiroX);
+	
+    // criou uma variave, que vai receber o tempo, a cada 30s
+	var tempoDisparo=window.setInterval(executaDisparo, 30);
+	
+	} //Fecha podeAtirar
+    
+   	function executaDisparo() {
+        // 
+	    posicaoX = parseInt($("#disparo").css("left"));
+	    $("#disparo").css("left",posicaoX+15); 
+                //colidindo e resetando
+        		if (posicaoX>900) {
+						
+			window.clearInterval(tempoDisparo);// limpou
+			tempoDisparo=null; // limpou o tempo
+			$("#disparo").remove(); // removeu o disparo da tela pelo css
+			podeAtirar=true; // voltou com true na variavel atirar.
+					
+                   }
+	} // Fecha executaDisparo()
+} // Fecha disparo()
