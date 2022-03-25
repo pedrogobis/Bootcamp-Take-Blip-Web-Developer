@@ -204,6 +204,7 @@ function disparo() {
 	} // Fecha executaDisparo()
 } // Fecha disparo()
 
+/*
 function colisao() {
     // usando o novo framework, collision é uma funcao do framework
 	var colisao1 = ($("#jogador").collision($("#inimigo1")));
@@ -212,3 +213,50 @@ function colisao() {
 	console.log(colisao1);
 
 } //Fim da função colisao()
+*/
+
+// refatorando a colisao
+function colisao() {
+    // verficando se vai haver colisao entre o jogador um e o inimigo 1
+    var colisao1 = ($("#jogador").collision($("#inimigo1")));
+    // jogador com o inimigo1
+        
+        // se bateu vai reposicionar o inimigo.
+        if (colisao1.length>0) {
+        
+            // posicao dos inimigos
+        inimigo1X = parseInt($("#inimigo1").css("left"));
+        inimigo1Y = parseInt($("#inimigo1").css("top"));
+        //chamando uma explosao com os parametros do inimigo.
+        explosao1(inimigo1X,inimigo1Y);
+    
+        posicaoY = parseInt(Math.random() * 334);
+        $("#inimigo1").css("left",694);
+        $("#inimigo1").css("top",posicaoY);
+        }
+    
+    } //Fim da função colisao()
+
+    //Explosão 1
+function explosao1(inimigo1X,inimigo1Y) {
+    //
+	$("#fundoGame").append("<div id='explosao1'></div");
+	$("#explosao1").css("background-image", "url(imgs/explosao.png)");
+	var div=$("#explosao1");
+	div.css("top", inimigo1Y);
+	div.css("left", inimigo1X);
+    //tamanho opacidade e velocidade
+	div.animate({width:200, opacity:0}, "slow");
+	// criou um tempo para remover a explosao  
+	var tempoExplosao=window.setInterval(removeExplosao, 1000);
+	
+        //zerou
+		function removeExplosao() {
+			
+			div.remove();
+			window.clearInterval(tempoExplosao);
+			tempoExplosao=null;
+			
+		}
+		
+	} // Fim da função explosao1()
