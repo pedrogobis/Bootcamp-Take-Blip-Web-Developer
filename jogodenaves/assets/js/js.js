@@ -28,6 +28,12 @@ var TECLA = {
 // faz parte da variavel ainda?
 jogo.pressionou = [];
 
+// variavel para velocidade de movimentacao
+var velocidade=5;
+//variavel da posicao, usou a funcao math com random, ele vai pegar um numero aleatorio de 0 até 334. que é onde o item pode se mover no fundo da img
+var posicaoY = parseInt(Math.random() * 334);
+
+
 //Verifica se o usuário pressionou alguma tecla	
 	
 $(document).keydown(function(e){
@@ -48,6 +54,7 @@ function loop() {
 //chamou outra funcao
 movefundo();
 movejogador();
+moveinimigo1();
 
 } // Fim da função loop()
 
@@ -101,3 +108,21 @@ function movejogador() {
 	}
 
 	} // fim da função movejogador()
+
+    function moveinimigo1() {
+        //criou uma variavel com a posicao do inimigo no x, então puxa a variavel velociadade e posicaoy  criadas anteriormente
+        
+        posicaoX = parseInt($("#inimigo1").css("left"));
+        $("#inimigo1").css("left",posicaoX-velocidade);
+        $("#inimigo1").css("top",posicaoY);
+            
+            // aqui limita a posiicao do item y para n chegar até o nosso jogador 
+            // quando ele chega até o jogador ele é reposicionado em outro lugar com valor randomico igual a posicao x
+            // ele recriou a variavel
+            if (posicaoX<=0) {
+            posicaoY = parseInt(Math.random() * 334);
+            $("#inimigo1").css("left",694);
+            $("#inimigo1").css("top",posicaoY);
+                
+            }
+    } //Fim da função moveinimigo1()
