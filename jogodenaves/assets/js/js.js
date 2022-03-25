@@ -240,22 +240,22 @@ function colisao() {
     //Explosão 1
 function explosao1(inimigo1X,inimigo1Y) {
     //
-	$("#fundoGame").append("<div id='explosao1'></div");
-	$("#explosao1").css("background-image", "url(imgs/explosao.png)");
-	var div=$("#explosao1");
-	div.css("top", inimigo1Y);
-	div.css("left", inimigo1X);
-    //tamanho opacidade e velocidade
-	div.animate({width:200, opacity:0}, "slow");
-	// criou um tempo para remover a explosao  
-	var tempoExplosao=window.setInterval(removeExplosao, 1000);
+	    $("#fundoGame").append("<div id='explosao1'></div");
+	    $("#explosao1").css("background-image", "url(assets/imgs/explosao.png)");
+	    var div=$("#explosao1");
+	    div.css("top", inimigo1Y);
+	    div.css("left", inimigo1X);
+        //tamanho opacidade e velocidade
+	        div.animate({width:200, opacity:0}, "slow");
+	    // criou um tempo para remover a explosao  
+	    var tempoExplosao=window.setInterval(removeExplosao, 1000);
 	
         //zerou
-		function removeExplosao() {
+		    function removeExplosao() {
 			
-			div.remove();
-			window.clearInterval(tempoExplosao);
-			tempoExplosao=null;
+			    div.remove();
+			    window.clearInterval(tempoExplosao);
+			    tempoExplosao=null;
 			
 		}
 		
