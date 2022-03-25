@@ -7,17 +7,37 @@ function start() { // Inicio da função start()
 	$("#fundoGame").append("<div id='inimigo1' class='anima2'></div>");
 	$("#fundoGame").append("<div id='inimigo2' ></div>");
 	$("#fundoGame").append("<div id='amigo' class='anima3'></div>");
+    $("#fundoGame").append("<div id='placar'></div>");
+
 
 } // Fim da função start
 
 
-// vamos criar o fundo em loop do jogo.
 
 //Principais variáveis do jogo
 	
 
-// criou a variavel com array vazio 
+
 var jogo = {}
+
+var TECLA = {
+    W: 87, 
+    S: 83,
+    D: 68
+}
+
+jogo.pressionou = [];
+
+var velocidade=5;
+var posicaoY = parseInt(Math.random() * 334);
+var podeAtirar=true;
+var fimdejogo=false;
+var pontos=0;
+var salvos=0;
+var perdidos=0;
+
+/*
+Comentarios sobre as variaveis:
 
 //criou uma variavel do tipo array, chamado telca, que vai recever em cada chave uma tecla pressionada
 var TECLA = {
@@ -39,6 +59,12 @@ var podeAtirar=true;
 //variavel para finalizar o jogo.
 var fimdejogo=false;
 
+//variaveis do placar.
+var pontos=0;
+var salvos=0;
+var perdidos=0;
+
+*/
 
 //Verifica se o usuário pressionou alguma tecla	
 	
@@ -64,6 +90,8 @@ moveinimigo1();
 moveinimigo2();
 moveamigo();
 colisao();
+placar();
+
 
 
 } // Fim da função loop()
@@ -259,7 +287,8 @@ function colisao() {
         // Disparo com o inimigo1
 		
 	    if (colisao3.length>0) {
-		
+        
+        pontos=pontos+100;
 		
         inimigo1X = parseInt($("#inimigo1").css("left"));
         inimigo1Y = parseInt($("#inimigo1").css("top"));
@@ -277,6 +306,8 @@ function colisao() {
 		
 	    if (colisao4.length>0) {
 		
+        pontos=pontos+50;
+
         inimigo2X = parseInt($("#inimigo2").css("left"));
         inimigo2Y = parseInt($("#inimigo2").css("top"));
         $("#inimigo2").remove();
@@ -291,6 +322,7 @@ function colisao() {
 		
 	     if (colisao5.length>0) {
 		
+        salvos++;
         reposicionaAmigo();
         $("#amigo").remove();
         }
@@ -298,9 +330,9 @@ function colisao() {
         //Inimigo2 com o amigo
 		
         if (colisao6.length>0) {
-	    
-         amigoX = parseInt($("#amigo").css("left"));
-         amigoY = parseInt($("#amigo").css("top"));
+        perdidos++;
+        amigoX = parseInt($("#amigo").css("left"));
+        amigoY = parseInt($("#amigo").css("top"));
         explosao3(amigoX,amigoY);
          $("#amigo").remove();
             
@@ -415,3 +447,12 @@ function explosao1(inimigo1X,inimigo1Y) {
     }
     
     } // Fim da função explosao3
+
+    function placar() {
+	
+        $("#placar").html("<h2> Pontos: " + pontos + " Salvos: " + salvos + " Perdidos: " + perdidos + "</h2>");
+        
+    } //fim da função placar()
+    
+    
+    
