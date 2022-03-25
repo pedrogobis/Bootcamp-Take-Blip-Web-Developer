@@ -14,9 +14,31 @@ function start() { // Inicio da função start()
 // vamos criar o fundo em loop do jogo.
 
 //Principais variáveis do jogo
-	// criou a variavel com objeto vazio 
-var jogo = {}
 	
+
+// criou a variavel com array vazio 
+var jogo = {}
+
+//criou uma variavel do tipo array, chamado telca, que vai recever em cada chave uma tecla pressionada
+var TECLA = {
+    W: 87, // valor decimal de cada tecla
+    S: 83,
+    D: 68
+}
+// faz parte da variavel ainda?
+jogo.pressionou = [];
+
+//Verifica se o usuário pressionou alguma tecla	
+	
+$(document).keydown(function(e){
+	jogo.pressionou[e.which] = true;
+	});
+
+
+	$(document).keyup(function(e){
+       jogo.pressionou[e.which] = false;
+	});
+
 //Game Loop
 // colocou uma funcao de timer na variavel tempo, colocou a propriedade com loop de 30s
 jogo.timer = setInterval(loop,30);
@@ -25,6 +47,7 @@ jogo.timer = setInterval(loop,30);
 function loop() {
 //chamou outra funcao
 movefundo();
+movejogador();
 
 } // Fim da função loop()
 
@@ -39,3 +62,25 @@ esquerda = parseInt($("#fundoGame").css("background-position"));
 $("#fundoGame").css("background-position",esquerda-1);
 
 } // fim da função movefundo()
+
+function movejogador() {
+	
+	if (jogo.pressionou[TECLA.W]) {
+        // declarando a variavel, e na parte de baixo está executando - ela sobe
+		var topo = parseInt($("#jogador").css("top"));
+		$("#jogador").css("top",topo-10);
+	
+	}
+	
+	if (jogo.pressionou[TECLA.S]) {
+		//mesma coisa só que abaixando, só n sei pq os valores estão negativos
+		var topo = parseInt($("#jogador").css("top"));
+		$("#jogador").css("top",topo+10);	
+	}
+	
+	if (jogo.pressionou[TECLA.D]) {
+		
+		//Chama função Disparo	
+	}
+
+	} // fim da função movejogador()
