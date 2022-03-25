@@ -16,11 +16,8 @@ function start() { // Inicio da função start()
 
 
 //Principais variáveis do jogo
-	
-
 
 var jogo = {}
-
 var TECLA = {
     W: 87, 
     S: 83,
@@ -37,6 +34,14 @@ var pontos=0;
 var salvos=0;
 var perdidos=0;
 var energiaAtual=3;
+
+// colocar o som no jogo
+var somDisparo=document.getElementById("somDisparo");
+var somExplosao=document.getElementById("somExplosao");
+var musica=document.getElementById("musica");
+var somGameover=document.getElementById("somGameover");
+var somPerdido=document.getElementById("somPerdido");
+var somResgate=document.getElementById("somResgate");
 
 
 /*
@@ -69,6 +74,11 @@ var perdidos=0;
 
 */
 
+//Música em loop/ executa a musica padrão do jogo / está usando o js padrão nda de jquery
+musica.addEventListener("ended", function(){ musica.currentTime = 0; musica.play(); }, false);
+musica.play();
+
+
 //Verifica se o usuário pressionou alguma tecla	
 	
 $(document).keydown(function(e){
@@ -95,6 +105,7 @@ moveamigo();
 colisao();
 placar();
 energia();
+
 
 
 
@@ -204,7 +215,8 @@ function disparo() {
     //se pode atirar for igual a tiro
 	if (podeAtirar==true) {
 	// muda para false enquanto executar a funcao
-	podeAtirar=false;
+	somDisparo.play();
+    podeAtirar=false;
 	
     // criou a variavel com as posicoes do jogador
 	topo = parseInt($("#jogador").css("top"))
@@ -325,8 +337,8 @@ function colisao() {
         }
         // jogador com o amigo
 		
-	     if (colisao5.length>0) {
-		
+	    if (colisao5.length>0) {
+        somResgate.play();
         salvos++;
         velocidade=velocidade-0.1;
         reposicionaAmigo();
@@ -352,7 +364,8 @@ function colisao() {
     //Explosão 1
 function explosao1(inimigo1X,inimigo1Y) {
     //
-	    $("#fundoGame").append("<div id='explosao1'></div");
+        somExplosao.play();
+        $("#fundoGame").append("<div id='explosao1'></div");
 	    $("#explosao1").css("background-image", "url(assets/imgs/explosao.png)");
 	    var div=$("#explosao1");
 	    div.css("top", inimigo1Y);
@@ -397,7 +410,7 @@ function explosao1(inimigo1X,inimigo1Y) {
         //Explosão2
 	// mesma explosao do 1 mas dando os parametros ao inimigo 2
 	function explosao2(inimigo2X,inimigo2Y) {
-	
+        somExplosao.play();
         $("#fundoGame").append("<div id='explosao2'></div");
         $("#explosao2").css("background-image", "url(assets/imgs/explosao.png)");
         var div2=$("#explosao2");
@@ -441,6 +454,7 @@ function explosao1(inimigo1X,inimigo1Y) {
     //Explosão3
 	
     function explosao3(amigoX,amigoY) {
+        somPerdido.play();
         $("#fundoGame").append("<div id='explosao3' class='anima4'></div");
         $("#explosao3").css("top",amigoY);
         $("#explosao3").css("left",amigoX);
