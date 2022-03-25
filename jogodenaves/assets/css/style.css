@@ -81,7 +81,86 @@ background-image:url(../imgs/apache.png);
 
 }
 
+.anima1 {
+	/*chamou a imagem*/
+	background-image:url(../imgs/helicoptero.png);
+	/* usu o play(é uma keyframe que vai ser criada), colocou 5 segundos em 2 quadros e pra rodar infinito*/
+	animation:play .5s steps(2) infinite;
+	/*isso indica a mesma coisa que em cima, porém está mostrando pra cada navegador a funcao, cada linha abaixo é para um motor, motor que cada navegador usa, google, mozila, explorer e opera.*/
+    -webkit-animation: play .5s steps(2) infinite;
+    -moz-animation: play .5s steps(2) infinite;
+    -ms-animation: play .5s steps(2) infinite;
+    -o-animation: play .5s steps(2) infinite;
+	/*apos ter criado a classe no css, precisa chamar ele no js.*/
+}
+/*Key frame que ele usou ali em cima*/
+@keyframes play {
+	from {background-position:0px;}
+	to {background-position:-512px;}
+}
 
-**** index.html ****
+@-webkit-keyframes play {
+	from { background-position:0px; }
+	  to { background-position: -512px; }
+ }
+ 
+ @-moz-keyframes play {
+	from { background-position:0px; }
+	  to { background-position: -512px; }
+ }
+ 
+ @-ms-keyframes play {
+	from { background-position:0px; }
+	  to { background-position: -512px; }
+ }
+ 
+ @-o-keyframes play {
+	from { background-position:0px; }
+	  to { background-position: -512px; }
+ }
 
-<link href="css/estilos.css" rel="stylesheet" type="text/css">
+ .anima2 {
+	 /*chamando a animação para o outro elemento, não precisamos declarar o play novamente.*/
+    background-image:url(../imgs/inimigo1.png);
+    animation: play .5s steps(2) infinite;
+    -webkit-animation: play .5s steps(2) infinite;
+    -moz-animation: play .5s steps(2) infinite;
+    -ms-animation: play .5s steps(2) infinite;
+    -o-animation: play .5s steps(2) infinite; 
+}
+
+.anima3 {
+	/*aqui vamos criar outra keyframe pois, é um elemento diferetente e com mais quadros que o anterior*/
+	background-image:url(../imgs/amigo.png);
+	animation:play2 .9s steps(12) infinite;
+	-webkit-animation: play2 .9s steps(12) infinite;
+       -moz-animation: play2 .9s steps(12) infinite;
+        -ms-animation: play2 .9s steps(12) infinite;
+         -o-animation: play2 .9s steps(12) infinite;
+}
+
+@keyframes play2 {
+	from {background-position:0px;}
+	to {background-position:-528px;}
+}
+
+@-webkit-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
+}
+
+@-moz-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
+}
+
+@-ms-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
+}
+
+@-o-keyframes play2 {
+   from { background-position:    0px; }
+     to { background-position: -528px; }
+}
+
