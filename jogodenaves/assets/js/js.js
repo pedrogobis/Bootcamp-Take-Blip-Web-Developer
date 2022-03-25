@@ -69,6 +69,12 @@ function movejogador() {
         // declarando a variavel, e na parte de baixo está executando - ela sobe
 		var topo = parseInt($("#jogador").css("top"));
 		$("#jogador").css("top",topo-10);
+        // está definindo um limite para o elemento não sair do fundo.
+        if (topo<=0) {
+                
+            $("#jogador").css("top",topo+10);
+        }
+
 	
 	}
 	
@@ -76,8 +82,19 @@ function movejogador() {
 		//mesma coisa só que abaixando, só n sei pq os valores estão negativos
 		var topo = parseInt($("#jogador").css("top"));
 		$("#jogador").css("top",topo+10);	
+
+        //valor aqui ele colocou de 434 que é de acordo com a img onde seria o chão, esse calculo cada jogo vai de uma 
+        if (topo>=434) {	
+            $("#jogador").css("top",topo-10);
+                
+        }
+
+
 	}
 	
+
+
+
 	if (jogo.pressionou[TECLA.D]) {
 		
 		//Chama função Disparo	
