@@ -4,7 +4,7 @@ var object = {propriedade1: 'valor1', propriedade2: 'valor2', propriedade3: 'val
 
 // for executa uma instrução até que ela seja falsa.
 
-for(let indice = 0; indice< array.length; indice++){
+for(let indice = 0; indice< object.length; indice++){
     console.log(indice)
 
 }
